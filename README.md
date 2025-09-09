@@ -20,28 +20,31 @@
 
 ## 🎯 The Problem
 
-*Which "How Might We..." question from the challenge brief are you tackling? Show the format by providing an example below.*
-
-> **Example:** How might we help busy people organize their daily tasks more effectively?
+**Challenge Track:** E-Channels & Transaction Reliability  
+**Challenge Question:**  
+> How might we shield customers from internal system complexities and make every digital transaction feel instant and completely reliable, even when failures occur behind the scenes?
 
 ## ✨ Our Solution
 
-*Provide a short, high-level description of your project. What is your unique idea? What does it do? How does it solve the problem?*
+Our project, **Instant-Feel Transactions**, is a prototype mobile banking app (built with Wema Bank colors) designed to **preserve customer trust during transaction delays**.  
 
-**Example:**
-"Our project, 'TaskMaster,' is a clean and simple to-do list application. It allows users to add tasks, mark them as complete, and sort them by priority. The goal is to provide a straightforward tool to help users stay organized."
+Key features:
+- **Proactive Communication:** Clear push + SMS notifications before, during, and after transactions (e.g., if a destination bank is slow or down).  
+- **Shadow Balance (MoneyBox):** Incoming transfers appear instantly as a "pending balance" visible to customers, even if they aren’t yet fully cleared. Customers see proof of the transaction without being able to spend until confirmed.  
+- **Monitoring & Transparency:** Simple dashboard showing partner bank statuses (UP / SLOW / DOWN). Users can check via app or USSD.  
+- **Fallback Channels:** SMS + USSD support for feature-phone users or during poor internet conditions.  
+
+This way, customers always see **instant feedback** on their money — turning potential frustration into **trust and confidence**.
 
 ---
 
 ## 🛠️ Tech Stack
 
-*List the major technologies, frameworks, and platforms you used to build your project.*
-
-*   **Frontend:** (e.g., React, Next.js, Tailwind CSS)
-*   **Backend:** (e.g., Node.js with Serverless Functions on Vercel)
-*   **Database:** (e.g., PostgreSQL via Supabase)
-*   **Deployment:** (e.g., Vercel)
-*   **AI/APIs:** (e.g., Google Gemini API)
+*   **Frontend (Mobile App):** React Native + Expo, Tailwind CSS (via NativeWind), Framer Motion for animations  
+*   **Backend:** FastAPI (Python) with WebSocket/SSE for real-time events  
+*   **Database:** SQLite (for prototype persistence)  
+*   **Deployment:** Vercel and Render
+*   **APIs / Integrations:** Mock NIP Event Generator, SMS Stub, USSD Simulation 
 
 ---
 
@@ -57,18 +60,29 @@
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd [project-directory]
+    cd instant-feel-transactions
     ```
-3.  Install dependencies:
+3.  Install dependencies (frontend + backend):
     ```bash
-    npm install
+    cd frontend && npm install
+    cd ../backend && pip install -r requirements.txt
     ```
-4.  Create a `.env.local` file and add the necessary environment variables:
-    ```
-    DATABASE_URL=...
-    API_KEY=...
-    ```
-5.  Run the development server:
+4.  Run the backend:
     ```bash
-    npm run dev
+    uvicorn main:app --reload
     ```
+5.  Run the frontend:
+    ```bash
+    npm start
+    ```
+6.  Open the Expo Go app on your phone and scan the QR code to launch the prototype. 
+
+---
+
+## 📖 Documentation
+
+- **Shadow Balance Lifecycle:** Pending → Cleared / Failed with reconciliation logic.  
+- **Notifications:** All state changes generate push + SMS (stubbed).  
+- **Monitoring Panel:** Toggles partner bank status to simulate real-world outages.  
+
+---
