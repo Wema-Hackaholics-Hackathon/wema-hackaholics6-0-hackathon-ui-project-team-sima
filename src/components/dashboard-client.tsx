@@ -115,6 +115,8 @@ export function DashboardClient({
 
   // Function to refresh account data with debouncing
   const refreshAccountData = useCallback(async () => {
+    console.log('[DASHBOARD CLIENT] refreshAccountData called');
+    
     // Clear any existing timeout
     if (refreshTimeoutRef.current) {
       clearTimeout(refreshTimeoutRef.current);
@@ -123,9 +125,12 @@ export function DashboardClient({
     // Set a new timeout to debounce the refresh
     refreshTimeoutRef.current = setTimeout(async () => {
       try {
+        console.log('[UI REFRESH] Starting account data refresh...');
+        
         const accountResponse = await fetch(`/api/accounts?userId=${user.id}`);
         if (accountResponse.ok) {
           const accountData = await accountResponse.json();
+          console.log('[UI REFRESH] Account data:', accountData);
           setAccount(accountData);
         }
 
@@ -135,8 +140,11 @@ export function DashboardClient({
           const userTransactions = Array.isArray(transactionsData) 
             ? transactionsData 
             : transactionsData.transactions || [];
+          console.log('[UI REFRESH] Transactions data:', userTransactions);
           setTransactions(userTransactions);
         }
+        
+        console.log('[UI REFRESH] Account data refresh completed');
       } catch (error) {
         console.error('Error refreshing account data:', error);
       }

@@ -1,7 +1,8 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Banknote, Shield, User as UserIcon } from 'lucide-react';
+import { Shield, User as UserIcon } from 'lucide-react';
+import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -24,8 +25,13 @@ export default function LoginPage() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-background p-4">
       <div className="mb-8 text-center">
         <div className="flex items-center justify-center gap-3 mb-2">
-            <div className="bg-primary p-3 rounded-lg">
-              <Banknote className="text-primary-foreground h-8 w-8" />
+            <div className="relative w-12 h-12">
+              <Image
+                src="/wemaba-logo.png"
+                alt="Wema Bank Logo"
+                fill
+                className="object-contain"
+              />
             </div>
         </div>
         <h1 className="text-4xl font-bold text-primary">WemaTrust</h1>

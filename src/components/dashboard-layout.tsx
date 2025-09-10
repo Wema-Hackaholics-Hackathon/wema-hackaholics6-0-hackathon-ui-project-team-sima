@@ -11,8 +11,9 @@ import {
   SidebarTrigger,
   SidebarFooter,
 } from '@/components/ui/sidebar';
-import { Banknote, LayoutDashboard, Github, LogOut, PanelLeft } from 'lucide-react';
+import { LayoutDashboard, Github, LogOut, PanelLeft } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from './ui/button';
 
@@ -29,8 +30,13 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
       <Sidebar>
         <SidebarHeader className="p-4">
           <Link href="/" className="flex items-center gap-3">
-            <div className="bg-primary p-2 rounded-lg">
-              <Banknote className="text-primary-foreground" />
+            <div className="relative w-8 h-8">
+              <Image
+                src="/wemaba-logo.png"
+                alt="Wema Bank Logo"
+                fill
+                className="object-contain"
+              />
             </div>
             <h1 className="text-xl font-semibold text-primary group-data-[collapsible=icon]:hidden">WemaTrust</h1>
           </Link>
@@ -73,8 +79,13 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
                 <PanelLeft className="h-5 w-5" />
             </SidebarTrigger>
             <div className="flex items-center gap-2">
-              <div className="bg-primary p-1.5 rounded-md">
-                <Banknote size={20} className="text-primary-foreground" />
+              <div className="relative w-6 h-6">
+                <Image
+                  src="/wemaba-logo.png"
+                  alt="Wema Bank Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h2 className="text-lg font-semibold text-primary">WemaTrust</h2>
             </div>
