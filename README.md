@@ -12,8 +12,7 @@
 ## 🚀 Live Demo
 
 *   **Live Application:** https://wematrust.vercel.app/
-*   **Backend API:** [Link to your live backend API endpoint URL, if separate]
-*   **Recorded Demo:** [Link to your recorded demo explaining how your solution works using Loom].
+*   **Recorded Demo:** [Loom Video Here](https://www.loom.com/share/5baca96bfaaa4f0bb29e4d67dd73be16?sid=ad7178eb-052c-4984-8d10-d472cf967938).
 
 
 ---

@@ -157,6 +157,29 @@
           "status": "success",
           "id": "tx_1757531852726_ahlbpib3f",
           "createdAt": "2025-09-10T19:17:32.726Z"
+        },
+        {
+          "userId": "user1",
+          "txn_ref": "WT_1757540576757",
+          "type": "debit",
+          "amount": 3000,
+          "to_account": "9876543210",
+          "from_bank": "WemaTrust",
+          "note": "Groceries",
+          "status": "success",
+          "id": "tx_1757540576770_w4o1jog1e",
+          "createdAt": "2025-09-10T21:42:56.773Z"
+        },
+        {
+          "userId": "user1",
+          "txn_ref": "WT_1757540644422",
+          "type": "credit",
+          "amount": 3000,
+          "from_bank": "WemaTrust",
+          "note": "Shopping",
+          "status": "success",
+          "id": "tx_1757540644431_accjbp73y",
+          "createdAt": "2025-09-10T21:44:04.431Z"
         }
       ]
     ],
@@ -220,6 +243,29 @@
           "status": "success",
           "id": "tx_1757531852721_e4hokzqrq",
           "createdAt": "2025-09-10T19:17:32.721Z"
+        },
+        {
+          "userId": "user2",
+          "txn_ref": "WT_1757540576757",
+          "type": "credit",
+          "amount": 3000,
+          "from_bank": "WemaTrust",
+          "note": "Groceries",
+          "status": "success",
+          "id": "tx_1757540576807_zqyvao1oc",
+          "createdAt": "2025-09-10T21:42:56.807Z"
+        },
+        {
+          "userId": "user2",
+          "txn_ref": "WT_1757540644422",
+          "type": "debit",
+          "amount": 3000,
+          "to_account": "0123456789",
+          "from_bank": "WemaTrust",
+          "note": "Shopping",
+          "status": "success",
+          "id": "tx_1757540644427_6ccvasc1w",
+          "createdAt": "2025-09-10T21:44:04.427Z"
         }
       ]
     ]
@@ -640,6 +686,172 @@
         "shadowEntries": []
       },
       "createdAt": "2025-09-10T19:17:32.739Z"
+    },
+    {
+      "id": "audit_1757540576789_ejcmakc7i",
+      "tableName": "transactions",
+      "recordId": "tx_1757540576770_w4o1jog1e",
+      "action": "CREATE",
+      "oldValues": null,
+      "newValues": {
+        "userId": "user1",
+        "txn_ref": "WT_1757540576757",
+        "type": "debit",
+        "amount": 3000,
+        "to_account": "9876543210",
+        "from_bank": "WemaTrust",
+        "note": "Groceries",
+        "status": "success",
+        "id": "tx_1757540576770_w4o1jog1e",
+        "createdAt": "2025-09-10T21:42:56.773Z"
+      },
+      "userId": "user1",
+      "createdAt": "2025-09-10T21:42:56.789Z"
+    },
+    {
+      "id": "audit_1757540576814_rkwjtuq7d",
+      "tableName": "transactions",
+      "recordId": "tx_1757540576807_zqyvao1oc",
+      "action": "CREATE",
+      "oldValues": null,
+      "newValues": {
+        "userId": "user2",
+        "txn_ref": "WT_1757540576757",
+        "type": "credit",
+        "amount": 3000,
+        "from_bank": "WemaTrust",
+        "note": "Groceries",
+        "status": "success",
+        "id": "tx_1757540576807_zqyvao1oc",
+        "createdAt": "2025-09-10T21:42:56.807Z"
+      },
+      "userId": "user2",
+      "createdAt": "2025-09-10T21:42:56.814Z"
+    },
+    {
+      "id": "audit_1757540576824_axheuya5b",
+      "tableName": "accounts",
+      "recordId": "acc_1",
+      "action": "UPDATE",
+      "oldValues": {
+        "id": "acc_1",
+        "name": "Demo User 1",
+        "accountNumber": "0123456789",
+        "balance": 103000,
+        "shadowEntries": []
+      },
+      "newValues": {
+        "id": "acc_1",
+        "name": "Demo User 1",
+        "accountNumber": "0123456789",
+        "balance": 100000,
+        "shadowEntries": []
+      },
+      "createdAt": "2025-09-10T21:42:56.824Z"
+    },
+    {
+      "id": "audit_1757540576852_1fjd8jqde",
+      "tableName": "accounts",
+      "recordId": "acc_2",
+      "action": "UPDATE",
+      "oldValues": {
+        "id": "acc_2",
+        "name": "Demo User 2",
+        "accountNumber": "9876543210",
+        "balance": 47000,
+        "shadowEntries": []
+      },
+      "newValues": {
+        "id": "acc_2",
+        "name": "Demo User 2",
+        "accountNumber": "9876543210",
+        "balance": 50000,
+        "shadowEntries": []
+      },
+      "createdAt": "2025-09-10T21:42:56.852Z"
+    },
+    {
+      "id": "audit_1757540644429_5ir5k8a3b",
+      "tableName": "transactions",
+      "recordId": "tx_1757540644427_6ccvasc1w",
+      "action": "CREATE",
+      "oldValues": null,
+      "newValues": {
+        "userId": "user2",
+        "txn_ref": "WT_1757540644422",
+        "type": "debit",
+        "amount": 3000,
+        "to_account": "0123456789",
+        "from_bank": "WemaTrust",
+        "note": "Shopping",
+        "status": "success",
+        "id": "tx_1757540644427_6ccvasc1w",
+        "createdAt": "2025-09-10T21:44:04.427Z"
+      },
+      "userId": "user2",
+      "createdAt": "2025-09-10T21:44:04.429Z"
+    },
+    {
+      "id": "audit_1757540644435_lzaw247ve",
+      "tableName": "transactions",
+      "recordId": "tx_1757540644431_accjbp73y",
+      "action": "CREATE",
+      "oldValues": null,
+      "newValues": {
+        "userId": "user1",
+        "txn_ref": "WT_1757540644422",
+        "type": "credit",
+        "amount": 3000,
+        "from_bank": "WemaTrust",
+        "note": "Shopping",
+        "status": "success",
+        "id": "tx_1757540644431_accjbp73y",
+        "createdAt": "2025-09-10T21:44:04.431Z"
+      },
+      "userId": "user1",
+      "createdAt": "2025-09-10T21:44:04.435Z"
+    },
+    {
+      "id": "audit_1757540644451_ty9fbrnzs",
+      "tableName": "accounts",
+      "recordId": "acc_2",
+      "action": "UPDATE",
+      "oldValues": {
+        "id": "acc_2",
+        "name": "Demo User 2",
+        "accountNumber": "9876543210",
+        "balance": 50000,
+        "shadowEntries": []
+      },
+      "newValues": {
+        "id": "acc_2",
+        "name": "Demo User 2",
+        "accountNumber": "9876543210",
+        "balance": 47000,
+        "shadowEntries": []
+      },
+      "createdAt": "2025-09-10T21:44:04.451Z"
+    },
+    {
+      "id": "audit_1757540644482_24309p9gm",
+      "tableName": "accounts",
+      "recordId": "acc_1",
+      "action": "UPDATE",
+      "oldValues": {
+        "id": "acc_1",
+        "name": "Demo User 1",
+        "accountNumber": "0123456789",
+        "balance": 100000,
+        "shadowEntries": []
+      },
+      "newValues": {
+        "id": "acc_1",
+        "name": "Demo User 1",
+        "accountNumber": "0123456789",
+        "balance": 103000,
+        "shadowEntries": []
+      },
+      "createdAt": "2025-09-10T21:44:04.482Z"
     }
   ],
   "prefundedAccounts": [
@@ -650,7 +862,7 @@
         "bankId": "bank_a",
         "bankName": "Zenith Bank",
         "accountNumber": "2087654321",
-        "balance": 50000000,
+        "balance": 49997000,
         "status": "ACTIVE",
         "lastReplenished": "2025-09-10T18:49:44.700Z",
         "createdAt": "2025-09-10T18:49:44.700Z"
@@ -689,7 +901,7 @@
         "bankId": "bank_d",
         "bankName": "UBA",
         "accountNumber": "2227654321",
-        "balance": 4997000,
+        "balance": 4994000,
         "status": "DEPLETED",
         "lastReplenished": "2025-09-10T18:49:44.700Z",
         "createdAt": "2025-09-10T18:49:44.700Z"
@@ -805,6 +1017,52 @@
         "notes": "Instant transfer - Prefunded account used (Bank: DOWN)",
         "id": "tl_1757531852741_ifb0ehn2s",
         "createdAt": "2025-09-10T19:17:32.741Z"
+      }
+    ],
+    [
+      "tl_1757540576855_rxtgj894n",
+      {
+        "transactionId": "WT_1757540576757",
+        "senderUserId": "user1",
+        "senderName": "Demo User 1",
+        "senderAccount": "0123456789",
+        "recipientUserId": "user2",
+        "recipientName": "Demo User 2",
+        "recipientAccount": "9876543210",
+        "recipientBank": "bank_a",
+        "amount": 3000,
+        "transferType": "WEMA_TO_OTHER",
+        "instantStatus": "CREDITED",
+        "backendStatus": "SETTLED",
+        "prefundedAccountUsed": "pfa_zenith",
+        "prefundedAccountBalance": 49997000,
+        "notes": "Instant transfer - Prefunded account used (Bank: UP)",
+        "id": "tl_1757540576855_rxtgj894n",
+        "createdAt": "2025-09-10T21:42:56.855Z",
+        "settledAt": "2025-09-10T21:42:59.936Z",
+        "settlementReference": "STL_1757540579930"
+      }
+    ],
+    [
+      "tl_1757540644484_egbp4dklh",
+      {
+        "transactionId": "WT_1757540644422",
+        "senderUserId": "user2",
+        "senderName": "Demo User 2",
+        "senderAccount": "9876543210",
+        "recipientUserId": "user1",
+        "recipientName": "Demo User 1",
+        "recipientAccount": "0123456789",
+        "recipientBank": "bank_d",
+        "amount": 3000,
+        "transferType": "WEMA_TO_OTHER",
+        "instantStatus": "CREDITED",
+        "backendStatus": "UNRESOLVED",
+        "prefundedAccountUsed": "pfa_uba",
+        "prefundedAccountBalance": 4994000,
+        "notes": "Instant transfer - Prefunded account used (Bank: DOWN)",
+        "id": "tl_1757540644484_egbp4dklh",
+        "createdAt": "2025-09-10T21:44:04.484Z"
       }
     ]
   ]
