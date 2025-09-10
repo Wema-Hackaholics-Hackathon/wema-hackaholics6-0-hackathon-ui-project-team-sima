@@ -1,11 +1,11 @@
 # [Project Title]
 
 ## Team Members
-- [Name 1]
-- [Name 2]
-- [Name 3]
-- [Name 4]
-- [Name 5]
+- Olaniran Pamilerin Simon
+- Oluremi Alao
+- Victor Akinmoladun
+- Ayooluwa Paul
+- Kolawole Jegede
 
 ---
 
