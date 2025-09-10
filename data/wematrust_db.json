@@ -40,7 +40,7 @@
         "id": "acc_1",
         "name": "Demo User 1",
         "accountNumber": "0123456789",
-        "balance": 82501,
+        "balance": 103000,
         "shadowEntries": []
       }
     ],
@@ -50,7 +50,7 @@
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 67499,
+        "balance": 47000,
         "shadowEntries": []
       }
     ]
@@ -62,7 +62,8 @@
         "id": "bank_a",
         "name": "Zenith Bank",
         "status": "UP",
-        "historicalSuccessRate": 0.98
+        "historicalSuccessRate": 0.98,
+        "networkReliability": 98
       }
     ],
     [
@@ -71,7 +72,8 @@
         "id": "bank_b",
         "name": "GTBank",
         "status": "UP",
-        "historicalSuccessRate": 0.99
+        "historicalSuccessRate": 0.99,
+        "networkReliability": 99
       }
     ],
     [
@@ -80,7 +82,8 @@
         "id": "bank_c",
         "name": "Access Bank",
         "status": "SLOW",
-        "historicalSuccessRate": 0.85
+        "historicalSuccessRate": 0.85,
+        "networkReliability": 75
       }
     ],
     [
@@ -89,7 +92,8 @@
         "id": "bank_d",
         "name": "UBA",
         "status": "DOWN",
-        "historicalSuccessRate": 0.6
+        "historicalSuccessRate": 0.6,
+        "networkReliability": 45
       }
     ]
   ],
@@ -99,157 +103,60 @@
       [
         {
           "userId": "user1",
-          "txn_ref": "WT_1757508759726",
-          "type": "debit",
-          "amount": 2000,
-          "to_account": "9876543210",
-          "from_bank": "WemaTrust",
-          "note": "Test fixed transfer action",
-          "status": "success",
-          "id": "tx_1757508759727_hd71iejjc",
-          "createdAt": "2025-09-10T12:52:39.727Z"
-        },
-        {
-          "userId": "user1",
-          "txn_ref": "WT_1757509693107",
-          "type": "debit",
-          "amount": 1000,
-          "to_account": "9876543210",
-          "from_bank": "WemaTrust",
-          "note": "Test UI refresh fix",
-          "status": "success",
-          "id": "tx_1757509693109_hr4gwgf7l",
-          "createdAt": "2025-09-10T13:08:13.109Z"
-        },
-        {
-          "userId": "user1",
-          "txn_ref": "WT_1757510890568",
-          "type": "debit",
-          "amount": 500,
-          "to_account": "9876543210",
-          "from_bank": "WemaTrust",
-          "note": "Test client-side form",
-          "status": "success",
-          "id": "tx_1757510890569_cwn753n4i",
-          "createdAt": "2025-09-10T13:28:10.569Z"
-        },
-        {
-          "userId": "user1",
-          "txn_ref": "WT_1757511213425",
-          "type": "debit",
-          "amount": 3000,
-          "to_account": "9876543210",
-          "from_bank": "WemaTrust",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757511213425_fzthlncmj",
-          "createdAt": "2025-09-10T13:33:33.425Z"
-        },
-        {
-          "userId": "user1",
-          "txn_ref": "WT_1757520221435",
-          "type": "debit",
-          "amount": 3000,
-          "to_account": "9876543210",
-          "from_bank": "WemaTrust",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757520221435_rd9dpcivl",
-          "createdAt": "2025-09-10T16:03:41.435Z"
-        },
-        {
-          "userId": "user1",
-          "txn_ref": "WT_1757521934262",
-          "type": "debit",
-          "amount": 3000,
-          "to_account": "9876543210",
-          "from_bank": "Wema Bank",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757521934262_4hygxh91a",
-          "createdAt": "2025-09-10T16:32:14.262Z"
-        },
-        {
-          "userId": "user1",
-          "txn_ref": "WT_1757522320039",
-          "type": "debit",
-          "amount": 3000,
-          "to_account": "9876543210",
-          "from_bank": "WemaTrust",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757522320040_56p41pzbp",
-          "createdAt": "2025-09-10T16:38:40.040Z"
-        },
-        {
-          "userId": "user1",
-          "txn_ref": "WT_1757522338350",
-          "type": "debit",
-          "amount": 2999,
-          "to_account": "9876543210",
-          "from_bank": "WemaTrust",
-          "note": "Growing",
-          "status": "success",
-          "id": "tx_1757522338350_lb05vdyt8",
-          "createdAt": "2025-09-10T16:38:58.350Z"
-        },
-        {
-          "userId": "user1",
-          "txn_ref": "WT_1757522349477",
+          "txn_ref": "WT_1757530252564",
           "type": "debit",
           "amount": 5000,
           "to_account": "9876543210",
           "from_bank": "WemaTrust",
-          "note": "Growing",
+          "note": "Testing",
           "status": "success",
-          "id": "tx_1757522349477_xob4k4uib",
-          "createdAt": "2025-09-10T16:39:09.477Z"
+          "id": "tx_1757530252564_yorkr647p",
+          "createdAt": "2025-09-10T18:50:52.564Z"
         },
         {
           "userId": "user1",
-          "txn_ref": "WT_1757522392409",
-          "type": "credit",
-          "amount": 9000,
+          "txn_ref": "WT_1757530399756",
+          "type": "debit",
+          "amount": 3000,
+          "to_account": "9876543210",
           "from_bank": "WemaTrust",
-          "note": "Gro",
+          "note": "Test 2",
           "status": "success",
-          "id": "tx_1757522392412_0i9ropsa1",
-          "createdAt": "2025-09-10T16:39:52.412Z"
+          "id": "tx_1757530399756_cg95gxkxs",
+          "createdAt": "2025-09-10T18:53:19.757Z"
         },
         {
           "userId": "user1",
-          "txn_ref": "WT_1757522565923",
+          "txn_ref": "WT_1757531026045",
+          "type": "credit",
+          "amount": 3000,
+          "from_bank": "WemaTrust",
+          "note": "Testing",
+          "status": "success",
+          "id": "tx_1757531026050_8h3avcnjr",
+          "createdAt": "2025-09-10T19:03:46.050Z"
+        },
+        {
+          "userId": "user1",
+          "txn_ref": "WT_1757531164628",
           "type": "credit",
           "amount": 5000,
           "from_bank": "WemaTrust",
-          "note": "Grow",
+          "note": "Test 3",
           "status": "success",
-          "id": "tx_1757522565976_7kr79uh22",
-          "createdAt": "2025-09-10T16:42:45.976Z"
+          "id": "tx_1757531164633_uj7ifrcz6",
+          "createdAt": "2025-09-10T19:06:04.633Z"
         },
         {
           "userId": "user1",
-          "txn_ref": "WT_1757522665226",
-          "type": "debit",
-          "amount": 5000,
-          "to_account": "9876543210",
-          "from_bank": "WemaTrust",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757522665226_vs1hozoiv",
-          "createdAt": "2025-09-10T16:44:25.227Z"
-        },
-        {
-          "userId": "user1",
-          "txn_ref": "WT_1757522798011",
-          "type": "debit",
+          "txn_ref": "WT_1757531852717",
+          "type": "credit",
           "amount": 3000,
-          "to_account": "9876543210",
           "from_bank": "WemaTrust",
-          "note": "Grow",
+          "note": "Testing 4",
           "status": "success",
-          "id": "tx_1757522798011_nx0x8k901",
-          "createdAt": "2025-09-10T16:46:38.011Z"
+          "id": "tx_1757531852726_ahlbpib3f",
+          "createdAt": "2025-09-10T19:17:32.726Z"
         }
       ]
     ],
@@ -258,148 +165,61 @@
       [
         {
           "userId": "user2",
-          "txn_ref": "WT_1757508759726",
-          "type": "credit",
-          "amount": 2000,
-          "from_bank": "WemaTrust",
-          "note": "Test fixed transfer action",
-          "status": "success",
-          "id": "tx_1757508759736_s9vsh3djm",
-          "createdAt": "2025-09-10T12:52:39.736Z"
-        },
-        {
-          "userId": "user2",
-          "txn_ref": "WT_1757509693107",
-          "type": "credit",
-          "amount": 1000,
-          "from_bank": "WemaTrust",
-          "note": "Test UI refresh fix",
-          "status": "success",
-          "id": "tx_1757509693123_8u2t8wkmg",
-          "createdAt": "2025-09-10T13:08:13.123Z"
-        },
-        {
-          "userId": "user2",
-          "txn_ref": "WT_1757510890568",
-          "type": "credit",
-          "amount": 500,
-          "from_bank": "WemaTrust",
-          "note": "Test client-side form",
-          "status": "success",
-          "id": "tx_1757510890574_qcuh9dy7w",
-          "createdAt": "2025-09-10T13:28:10.574Z"
-        },
-        {
-          "userId": "user2",
-          "txn_ref": "WT_1757511213425",
-          "type": "credit",
-          "amount": 3000,
-          "from_bank": "WemaTrust",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757511213442_si7njuwb4",
-          "createdAt": "2025-09-10T13:33:33.442Z"
-        },
-        {
-          "userId": "user2",
-          "txn_ref": "WT_1757520221435",
-          "type": "credit",
-          "amount": 3000,
-          "from_bank": "WemaTrust",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757520221490_b8y85zurc",
-          "createdAt": "2025-09-10T16:03:41.490Z"
-        },
-        {
-          "userId": "user2",
-          "txn_ref": "WT_1757521934262",
-          "type": "credit",
-          "amount": 3000,
-          "from_bank": "Wema Bank",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757521934359_erx74l99n",
-          "createdAt": "2025-09-10T16:32:14.359Z"
-        },
-        {
-          "userId": "user2",
-          "txn_ref": "WT_1757522320039",
-          "type": "credit",
-          "amount": 3000,
-          "from_bank": "WemaTrust",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757522320044_e05a41jdh",
-          "createdAt": "2025-09-10T16:38:40.044Z"
-        },
-        {
-          "userId": "user2",
-          "txn_ref": "WT_1757522338350",
-          "type": "credit",
-          "amount": 2999,
-          "from_bank": "WemaTrust",
-          "note": "Growing",
-          "status": "success",
-          "id": "tx_1757522338353_ivimt1qep",
-          "createdAt": "2025-09-10T16:38:58.354Z"
-        },
-        {
-          "userId": "user2",
-          "txn_ref": "WT_1757522349477",
+          "txn_ref": "WT_1757530252564",
           "type": "credit",
           "amount": 5000,
           "from_bank": "WemaTrust",
-          "note": "Growing",
+          "note": "Testing",
           "status": "success",
-          "id": "tx_1757522349482_94xj97du8",
-          "createdAt": "2025-09-10T16:39:09.482Z"
+          "id": "tx_1757530252568_54rxyt6a8",
+          "createdAt": "2025-09-10T18:50:52.568Z"
         },
         {
           "userId": "user2",
-          "txn_ref": "WT_1757522392409",
+          "txn_ref": "WT_1757530399756",
+          "type": "credit",
+          "amount": 3000,
+          "from_bank": "WemaTrust",
+          "note": "Test 2",
+          "status": "success",
+          "id": "tx_1757530399768_gqgmcg16f",
+          "createdAt": "2025-09-10T18:53:19.769Z"
+        },
+        {
+          "userId": "user2",
+          "txn_ref": "WT_1757531026045",
           "type": "debit",
-          "amount": 9000,
+          "amount": 3000,
           "to_account": "0123456789",
           "from_bank": "WemaTrust",
-          "note": "Gro",
+          "note": "Testing",
           "status": "success",
-          "id": "tx_1757522392409_hksjw58d1",
-          "createdAt": "2025-09-10T16:39:52.409Z"
+          "id": "tx_1757531026046_18jjtq94p",
+          "createdAt": "2025-09-10T19:03:46.046Z"
         },
         {
           "userId": "user2",
-          "txn_ref": "WT_1757522565923",
+          "txn_ref": "WT_1757531164628",
           "type": "debit",
           "amount": 5000,
           "to_account": "0123456789",
           "from_bank": "WemaTrust",
-          "note": "Grow",
+          "note": "Test 3",
           "status": "success",
-          "id": "tx_1757522565923_iumc1ta4d",
-          "createdAt": "2025-09-10T16:42:45.923Z"
+          "id": "tx_1757531164629_goyq0tsu6",
+          "createdAt": "2025-09-10T19:06:04.629Z"
         },
         {
           "userId": "user2",
-          "txn_ref": "WT_1757522665226",
-          "type": "credit",
-          "amount": 5000,
-          "from_bank": "WemaTrust",
-          "note": "Gro",
-          "status": "success",
-          "id": "tx_1757522665241_qab625pth",
-          "createdAt": "2025-09-10T16:44:25.241Z"
-        },
-        {
-          "userId": "user2",
-          "txn_ref": "WT_1757522798011",
-          "type": "credit",
+          "txn_ref": "WT_1757531852717",
+          "type": "debit",
           "amount": 3000,
+          "to_account": "0123456789",
           "from_bank": "WemaTrust",
-          "note": "Grow",
+          "note": "Testing 4",
           "status": "success",
-          "id": "tx_1757522798015_pesv6q880",
-          "createdAt": "2025-09-10T16:46:38.015Z"
+          "id": "tx_1757531852721_e4hokzqrq",
+          "createdAt": "2025-09-10T19:17:32.721Z"
         }
       ]
     ]
@@ -407,48 +227,48 @@
   "shadowEntries": [],
   "auditLogs": [
     {
-      "id": "audit_1757508759732_pjcmrx0b9",
+      "id": "audit_1757530252566_jyop8auh1",
       "tableName": "transactions",
-      "recordId": "tx_1757508759727_hd71iejjc",
+      "recordId": "tx_1757530252564_yorkr647p",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user1",
-        "txn_ref": "WT_1757508759726",
+        "txn_ref": "WT_1757530252564",
         "type": "debit",
-        "amount": 2000,
+        "amount": 5000,
         "to_account": "9876543210",
         "from_bank": "WemaTrust",
-        "note": "Test fixed transfer action",
+        "note": "Testing",
         "status": "success",
-        "id": "tx_1757508759727_hd71iejjc",
-        "createdAt": "2025-09-10T12:52:39.727Z"
+        "id": "tx_1757530252564_yorkr647p",
+        "createdAt": "2025-09-10T18:50:52.564Z"
       },
       "userId": "user1",
-      "createdAt": "2025-09-10T12:52:39.732Z"
+      "createdAt": "2025-09-10T18:50:52.566Z"
     },
     {
-      "id": "audit_1757508759736_be0u6dxn2",
+      "id": "audit_1757530252569_d3s57hm55",
       "tableName": "transactions",
-      "recordId": "tx_1757508759736_s9vsh3djm",
+      "recordId": "tx_1757530252568_54rxyt6a8",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user2",
-        "txn_ref": "WT_1757508759726",
+        "txn_ref": "WT_1757530252564",
         "type": "credit",
-        "amount": 2000,
+        "amount": 5000,
         "from_bank": "WemaTrust",
-        "note": "Test fixed transfer action",
+        "note": "Testing",
         "status": "success",
-        "id": "tx_1757508759736_s9vsh3djm",
-        "createdAt": "2025-09-10T12:52:39.736Z"
+        "id": "tx_1757530252568_54rxyt6a8",
+        "createdAt": "2025-09-10T18:50:52.568Z"
       },
       "userId": "user2",
-      "createdAt": "2025-09-10T12:52:39.736Z"
+      "createdAt": "2025-09-10T18:50:52.569Z"
     },
     {
-      "id": "audit_1757508759739_j33pdqhjh",
+      "id": "audit_1757530252571_z8pl7ou19",
       "tableName": "accounts",
       "recordId": "acc_1",
       "action": "UPDATE",
@@ -463,13 +283,13 @@
         "id": "acc_1",
         "name": "Demo User 1",
         "accountNumber": "0123456789",
-        "balance": 98000,
+        "balance": 95000,
         "shadowEntries": []
       },
-      "createdAt": "2025-09-10T12:52:39.739Z"
+      "createdAt": "2025-09-10T18:50:52.571Z"
     },
     {
-      "id": "audit_1757508759740_qq33e28q2",
+      "id": "audit_1757530252573_h9vy7bxlx",
       "tableName": "accounts",
       "recordId": "acc_2",
       "action": "UPDATE",
@@ -484,54 +304,54 @@
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 52000,
+        "balance": 55000,
         "shadowEntries": []
       },
-      "createdAt": "2025-09-10T12:52:39.740Z"
+      "createdAt": "2025-09-10T18:50:52.573Z"
     },
     {
-      "id": "audit_1757509693122_rmfwa094p",
+      "id": "audit_1757530399760_mvpr38gko",
       "tableName": "transactions",
-      "recordId": "tx_1757509693109_hr4gwgf7l",
+      "recordId": "tx_1757530399756_cg95gxkxs",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user1",
-        "txn_ref": "WT_1757509693107",
+        "txn_ref": "WT_1757530399756",
         "type": "debit",
-        "amount": 1000,
+        "amount": 3000,
         "to_account": "9876543210",
         "from_bank": "WemaTrust",
-        "note": "Test UI refresh fix",
+        "note": "Test 2",
         "status": "success",
-        "id": "tx_1757509693109_hr4gwgf7l",
-        "createdAt": "2025-09-10T13:08:13.109Z"
+        "id": "tx_1757530399756_cg95gxkxs",
+        "createdAt": "2025-09-10T18:53:19.757Z"
       },
       "userId": "user1",
-      "createdAt": "2025-09-10T13:08:13.122Z"
+      "createdAt": "2025-09-10T18:53:19.760Z"
     },
     {
-      "id": "audit_1757509693124_dpnmpnvh5",
+      "id": "audit_1757530399770_ih2lf7rjq",
       "tableName": "transactions",
-      "recordId": "tx_1757509693123_8u2t8wkmg",
+      "recordId": "tx_1757530399768_gqgmcg16f",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user2",
-        "txn_ref": "WT_1757509693107",
+        "txn_ref": "WT_1757530399756",
         "type": "credit",
-        "amount": 1000,
+        "amount": 3000,
         "from_bank": "WemaTrust",
-        "note": "Test UI refresh fix",
+        "note": "Test 2",
         "status": "success",
-        "id": "tx_1757509693123_8u2t8wkmg",
-        "createdAt": "2025-09-10T13:08:13.123Z"
+        "id": "tx_1757530399768_gqgmcg16f",
+        "createdAt": "2025-09-10T18:53:19.769Z"
       },
       "userId": "user2",
-      "createdAt": "2025-09-10T13:08:13.124Z"
+      "createdAt": "2025-09-10T18:53:19.770Z"
     },
     {
-      "id": "audit_1757509693125_fqk3e4cs6",
+      "id": "audit_1757530399779_hdvfd9y7n",
       "tableName": "accounts",
       "recordId": "acc_1",
       "action": "UPDATE",
@@ -539,20 +359,20 @@
         "id": "acc_1",
         "name": "Demo User 1",
         "accountNumber": "0123456789",
-        "balance": 98000,
+        "balance": 95000,
         "shadowEntries": []
       },
       "newValues": {
         "id": "acc_1",
         "name": "Demo User 1",
         "accountNumber": "0123456789",
-        "balance": 97000,
+        "balance": 92000,
         "shadowEntries": []
       },
-      "createdAt": "2025-09-10T13:08:13.125Z"
+      "createdAt": "2025-09-10T18:53:19.779Z"
     },
     {
-      "id": "audit_1757509693127_m2tg4fo6u",
+      "id": "audit_1757530399784_w36slepix",
       "tableName": "accounts",
       "recordId": "acc_2",
       "action": "UPDATE",
@@ -560,642 +380,61 @@
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 52000,
+        "balance": 55000,
         "shadowEntries": []
       },
       "newValues": {
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 53000,
+        "balance": 58000,
         "shadowEntries": []
       },
-      "createdAt": "2025-09-10T13:08:13.127Z"
+      "createdAt": "2025-09-10T18:53:19.784Z"
     },
     {
-      "id": "audit_1757510890573_e97bysa82",
+      "id": "audit_1757531026049_pzrxu45vm",
       "tableName": "transactions",
-      "recordId": "tx_1757510890569_cwn753n4i",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user1",
-        "txn_ref": "WT_1757510890568",
-        "type": "debit",
-        "amount": 500,
-        "to_account": "9876543210",
-        "from_bank": "WemaTrust",
-        "note": "Test client-side form",
-        "status": "success",
-        "id": "tx_1757510890569_cwn753n4i",
-        "createdAt": "2025-09-10T13:28:10.569Z"
-      },
-      "userId": "user1",
-      "createdAt": "2025-09-10T13:28:10.573Z"
-    },
-    {
-      "id": "audit_1757510890574_7uqiv7stb",
-      "tableName": "transactions",
-      "recordId": "tx_1757510890574_qcuh9dy7w",
+      "recordId": "tx_1757531026046_18jjtq94p",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user2",
-        "txn_ref": "WT_1757510890568",
-        "type": "credit",
-        "amount": 500,
-        "from_bank": "WemaTrust",
-        "note": "Test client-side form",
-        "status": "success",
-        "id": "tx_1757510890574_qcuh9dy7w",
-        "createdAt": "2025-09-10T13:28:10.574Z"
-      },
-      "userId": "user2",
-      "createdAt": "2025-09-10T13:28:10.574Z"
-    },
-    {
-      "id": "audit_1757510890576_dammzmkh9",
-      "tableName": "accounts",
-      "recordId": "acc_1",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 97000,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 96500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T13:28:10.576Z"
-    },
-    {
-      "id": "audit_1757510890579_cbss5vy1q",
-      "tableName": "accounts",
-      "recordId": "acc_2",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 53000,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 53500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T13:28:10.579Z"
-    },
-    {
-      "id": "audit_1757511213438_73z5i9s3r",
-      "tableName": "transactions",
-      "recordId": "tx_1757511213425_fzthlncmj",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user1",
-        "txn_ref": "WT_1757511213425",
+        "txn_ref": "WT_1757531026045",
         "type": "debit",
         "amount": 3000,
-        "to_account": "9876543210",
-        "from_bank": "WemaTrust",
-        "note": "Gro",
-        "status": "success",
-        "id": "tx_1757511213425_fzthlncmj",
-        "createdAt": "2025-09-10T13:33:33.425Z"
-      },
-      "userId": "user1",
-      "createdAt": "2025-09-10T13:33:33.438Z"
-    },
-    {
-      "id": "audit_1757511213443_b9h3mj0p9",
-      "tableName": "transactions",
-      "recordId": "tx_1757511213442_si7njuwb4",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user2",
-        "txn_ref": "WT_1757511213425",
-        "type": "credit",
-        "amount": 3000,
-        "from_bank": "WemaTrust",
-        "note": "Gro",
-        "status": "success",
-        "id": "tx_1757511213442_si7njuwb4",
-        "createdAt": "2025-09-10T13:33:33.442Z"
-      },
-      "userId": "user2",
-      "createdAt": "2025-09-10T13:33:33.445Z"
-    },
-    {
-      "id": "audit_1757511213450_jsyo6c1lr",
-      "tableName": "accounts",
-      "recordId": "acc_1",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 96500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 93500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T13:33:33.450Z"
-    },
-    {
-      "id": "audit_1757511213452_poyjq0zh1",
-      "tableName": "accounts",
-      "recordId": "acc_2",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 53500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 56500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T13:33:33.452Z"
-    },
-    {
-      "id": "audit_1757520221480_qgxbgifri",
-      "tableName": "transactions",
-      "recordId": "tx_1757520221435_rd9dpcivl",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user1",
-        "txn_ref": "WT_1757520221435",
-        "type": "debit",
-        "amount": 3000,
-        "to_account": "9876543210",
-        "from_bank": "WemaTrust",
-        "note": "Gro",
-        "status": "success",
-        "id": "tx_1757520221435_rd9dpcivl",
-        "createdAt": "2025-09-10T16:03:41.435Z"
-      },
-      "userId": "user1",
-      "createdAt": "2025-09-10T16:03:41.480Z"
-    },
-    {
-      "id": "audit_1757520221496_pss6693rd",
-      "tableName": "transactions",
-      "recordId": "tx_1757520221490_b8y85zurc",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user2",
-        "txn_ref": "WT_1757520221435",
-        "type": "credit",
-        "amount": 3000,
-        "from_bank": "WemaTrust",
-        "note": "Gro",
-        "status": "success",
-        "id": "tx_1757520221490_b8y85zurc",
-        "createdAt": "2025-09-10T16:03:41.490Z"
-      },
-      "userId": "user2",
-      "createdAt": "2025-09-10T16:03:41.496Z"
-    },
-    {
-      "id": "audit_1757520221512_tvvg2spb3",
-      "tableName": "accounts",
-      "recordId": "acc_1",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 93500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 90500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:03:41.512Z"
-    },
-    {
-      "id": "audit_1757520221521_l6y3ta9sa",
-      "tableName": "accounts",
-      "recordId": "acc_2",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 56500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 59500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:03:41.521Z"
-    },
-    {
-      "id": "audit_1757521934348_gelfaq50o",
-      "tableName": "transactions",
-      "recordId": "tx_1757521934262_4hygxh91a",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user1",
-        "txn_ref": "WT_1757521934262",
-        "type": "debit",
-        "amount": 3000,
-        "to_account": "9876543210",
-        "from_bank": "Wema Bank",
-        "note": "Gro",
-        "status": "success",
-        "id": "tx_1757521934262_4hygxh91a",
-        "createdAt": "2025-09-10T16:32:14.262Z"
-      },
-      "userId": "user1",
-      "createdAt": "2025-09-10T16:32:14.348Z"
-    },
-    {
-      "id": "audit_1757521934361_04semfndq",
-      "tableName": "transactions",
-      "recordId": "tx_1757521934359_erx74l99n",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user2",
-        "txn_ref": "WT_1757521934262",
-        "type": "credit",
-        "amount": 3000,
-        "from_bank": "Wema Bank",
-        "note": "Gro",
-        "status": "success",
-        "id": "tx_1757521934359_erx74l99n",
-        "createdAt": "2025-09-10T16:32:14.359Z"
-      },
-      "userId": "user2",
-      "createdAt": "2025-09-10T16:32:14.370Z"
-    },
-    {
-      "id": "audit_1757521934561_curwho9gd",
-      "tableName": "accounts",
-      "recordId": "acc_1",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 90500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 87500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:32:14.561Z"
-    },
-    {
-      "id": "audit_1757521934602_6hdatbobr",
-      "tableName": "accounts",
-      "recordId": "acc_2",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 59500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 62500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:32:14.602Z"
-    },
-    {
-      "id": "audit_1757522320042_noy1zhd7q",
-      "tableName": "transactions",
-      "recordId": "tx_1757522320040_56p41pzbp",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user1",
-        "txn_ref": "WT_1757522320039",
-        "type": "debit",
-        "amount": 3000,
-        "to_account": "9876543210",
-        "from_bank": "WemaTrust",
-        "note": "Gro",
-        "status": "success",
-        "id": "tx_1757522320040_56p41pzbp",
-        "createdAt": "2025-09-10T16:38:40.040Z"
-      },
-      "userId": "user1",
-      "createdAt": "2025-09-10T16:38:40.042Z"
-    },
-    {
-      "id": "audit_1757522320053_crez96kw4",
-      "tableName": "transactions",
-      "recordId": "tx_1757522320044_e05a41jdh",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user2",
-        "txn_ref": "WT_1757522320039",
-        "type": "credit",
-        "amount": 3000,
-        "from_bank": "WemaTrust",
-        "note": "Gro",
-        "status": "success",
-        "id": "tx_1757522320044_e05a41jdh",
-        "createdAt": "2025-09-10T16:38:40.044Z"
-      },
-      "userId": "user2",
-      "createdAt": "2025-09-10T16:38:40.053Z"
-    },
-    {
-      "id": "audit_1757522320062_ch702r93q",
-      "tableName": "accounts",
-      "recordId": "acc_1",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 87500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 84500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:38:40.062Z"
-    },
-    {
-      "id": "audit_1757522320075_6frpf6cy3",
-      "tableName": "accounts",
-      "recordId": "acc_2",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 62500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 65500,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:38:40.075Z"
-    },
-    {
-      "id": "audit_1757522338352_qtk2js9uc",
-      "tableName": "transactions",
-      "recordId": "tx_1757522338350_lb05vdyt8",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user1",
-        "txn_ref": "WT_1757522338350",
-        "type": "debit",
-        "amount": 2999,
-        "to_account": "9876543210",
-        "from_bank": "WemaTrust",
-        "note": "Growing",
-        "status": "success",
-        "id": "tx_1757522338350_lb05vdyt8",
-        "createdAt": "2025-09-10T16:38:58.350Z"
-      },
-      "userId": "user1",
-      "createdAt": "2025-09-10T16:38:58.352Z"
-    },
-    {
-      "id": "audit_1757522338355_08bo7naxi",
-      "tableName": "transactions",
-      "recordId": "tx_1757522338353_ivimt1qep",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user2",
-        "txn_ref": "WT_1757522338350",
-        "type": "credit",
-        "amount": 2999,
-        "from_bank": "WemaTrust",
-        "note": "Growing",
-        "status": "success",
-        "id": "tx_1757522338353_ivimt1qep",
-        "createdAt": "2025-09-10T16:38:58.354Z"
-      },
-      "userId": "user2",
-      "createdAt": "2025-09-10T16:38:58.355Z"
-    },
-    {
-      "id": "audit_1757522338464_f6ik8pr6g",
-      "tableName": "accounts",
-      "recordId": "acc_1",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 84500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 81501,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:38:58.464Z"
-    },
-    {
-      "id": "audit_1757522338469_lc6cgonkz",
-      "tableName": "accounts",
-      "recordId": "acc_2",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 65500,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 68499,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:38:58.469Z"
-    },
-    {
-      "id": "audit_1757522349478_ksfutgi7d",
-      "tableName": "transactions",
-      "recordId": "tx_1757522349477_xob4k4uib",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user1",
-        "txn_ref": "WT_1757522349477",
-        "type": "debit",
-        "amount": 5000,
-        "to_account": "9876543210",
-        "from_bank": "WemaTrust",
-        "note": "Growing",
-        "status": "success",
-        "id": "tx_1757522349477_xob4k4uib",
-        "createdAt": "2025-09-10T16:39:09.477Z"
-      },
-      "userId": "user1",
-      "createdAt": "2025-09-10T16:39:09.478Z"
-    },
-    {
-      "id": "audit_1757522349485_gudzaxv9e",
-      "tableName": "transactions",
-      "recordId": "tx_1757522349482_94xj97du8",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user2",
-        "txn_ref": "WT_1757522349477",
-        "type": "credit",
-        "amount": 5000,
-        "from_bank": "WemaTrust",
-        "note": "Growing",
-        "status": "success",
-        "id": "tx_1757522349482_94xj97du8",
-        "createdAt": "2025-09-10T16:39:09.482Z"
-      },
-      "userId": "user2",
-      "createdAt": "2025-09-10T16:39:09.485Z"
-    },
-    {
-      "id": "audit_1757522349489_nqog8ezoj",
-      "tableName": "accounts",
-      "recordId": "acc_1",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 81501,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 76501,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:39:09.489Z"
-    },
-    {
-      "id": "audit_1757522349492_6sqq4tgx6",
-      "tableName": "accounts",
-      "recordId": "acc_2",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 68499,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 73499,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:39:09.492Z"
-    },
-    {
-      "id": "audit_1757522392410_lwg6yhndz",
-      "tableName": "transactions",
-      "recordId": "tx_1757522392409_hksjw58d1",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user2",
-        "txn_ref": "WT_1757522392409",
-        "type": "debit",
-        "amount": 9000,
         "to_account": "0123456789",
         "from_bank": "WemaTrust",
-        "note": "Gro",
+        "note": "Testing",
         "status": "success",
-        "id": "tx_1757522392409_hksjw58d1",
-        "createdAt": "2025-09-10T16:39:52.409Z"
+        "id": "tx_1757531026046_18jjtq94p",
+        "createdAt": "2025-09-10T19:03:46.046Z"
       },
       "userId": "user2",
-      "createdAt": "2025-09-10T16:39:52.410Z"
+      "createdAt": "2025-09-10T19:03:46.049Z"
     },
     {
-      "id": "audit_1757522392414_imy5yu44x",
+      "id": "audit_1757531026052_d4lckmbmq",
       "tableName": "transactions",
-      "recordId": "tx_1757522392412_0i9ropsa1",
+      "recordId": "tx_1757531026050_8h3avcnjr",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user1",
-        "txn_ref": "WT_1757522392409",
+        "txn_ref": "WT_1757531026045",
         "type": "credit",
-        "amount": 9000,
+        "amount": 3000,
         "from_bank": "WemaTrust",
-        "note": "Gro",
+        "note": "Testing",
         "status": "success",
-        "id": "tx_1757522392412_0i9ropsa1",
-        "createdAt": "2025-09-10T16:39:52.412Z"
+        "id": "tx_1757531026050_8h3avcnjr",
+        "createdAt": "2025-09-10T19:03:46.050Z"
       },
       "userId": "user1",
-      "createdAt": "2025-09-10T16:39:52.420Z"
+      "createdAt": "2025-09-10T19:03:46.052Z"
     },
     {
-      "id": "audit_1757522392423_4jjxlnzuj",
+      "id": "audit_1757531026055_jynj27ntr",
       "tableName": "accounts",
       "recordId": "acc_2",
       "action": "UPDATE",
@@ -1203,20 +442,20 @@
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 73499,
+        "balance": 58000,
         "shadowEntries": []
       },
       "newValues": {
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 64499,
+        "balance": 55000,
         "shadowEntries": []
       },
-      "createdAt": "2025-09-10T16:39:52.423Z"
+      "createdAt": "2025-09-10T19:03:46.055Z"
     },
     {
-      "id": "audit_1757522392427_lstiudc34",
+      "id": "audit_1757531026058_mt4s5uwci",
       "tableName": "accounts",
       "recordId": "acc_1",
       "action": "UPDATE",
@@ -1224,61 +463,61 @@
         "id": "acc_1",
         "name": "Demo User 1",
         "accountNumber": "0123456789",
-        "balance": 76501,
+        "balance": 92000,
         "shadowEntries": []
       },
       "newValues": {
         "id": "acc_1",
         "name": "Demo User 1",
         "accountNumber": "0123456789",
-        "balance": 85501,
+        "balance": 95000,
         "shadowEntries": []
       },
-      "createdAt": "2025-09-10T16:39:52.427Z"
+      "createdAt": "2025-09-10T19:03:46.058Z"
     },
     {
-      "id": "audit_1757522565925_c8vp35kj8",
+      "id": "audit_1757531164631_uhhpdoavj",
       "tableName": "transactions",
-      "recordId": "tx_1757522565923_iumc1ta4d",
+      "recordId": "tx_1757531164629_goyq0tsu6",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user2",
-        "txn_ref": "WT_1757522565923",
+        "txn_ref": "WT_1757531164628",
         "type": "debit",
         "amount": 5000,
         "to_account": "0123456789",
         "from_bank": "WemaTrust",
-        "note": "Grow",
+        "note": "Test 3",
         "status": "success",
-        "id": "tx_1757522565923_iumc1ta4d",
-        "createdAt": "2025-09-10T16:42:45.923Z"
+        "id": "tx_1757531164629_goyq0tsu6",
+        "createdAt": "2025-09-10T19:06:04.629Z"
       },
       "userId": "user2",
-      "createdAt": "2025-09-10T16:42:45.925Z"
+      "createdAt": "2025-09-10T19:06:04.631Z"
     },
     {
-      "id": "audit_1757522566019_9fayzxcqb",
+      "id": "audit_1757531164643_vq01o5qnz",
       "tableName": "transactions",
-      "recordId": "tx_1757522565976_7kr79uh22",
+      "recordId": "tx_1757531164633_uj7ifrcz6",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user1",
-        "txn_ref": "WT_1757522565923",
+        "txn_ref": "WT_1757531164628",
         "type": "credit",
         "amount": 5000,
         "from_bank": "WemaTrust",
-        "note": "Grow",
+        "note": "Test 3",
         "status": "success",
-        "id": "tx_1757522565976_7kr79uh22",
-        "createdAt": "2025-09-10T16:42:45.976Z"
+        "id": "tx_1757531164633_uj7ifrcz6",
+        "createdAt": "2025-09-10T19:06:04.633Z"
       },
       "userId": "user1",
-      "createdAt": "2025-09-10T16:42:46.019Z"
+      "createdAt": "2025-09-10T19:06:04.643Z"
     },
     {
-      "id": "audit_1757522566069_a9jmmfrql",
+      "id": "audit_1757531164646_9335t2ewi",
       "tableName": "accounts",
       "recordId": "acc_2",
       "action": "UPDATE",
@@ -1286,20 +525,20 @@
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 64499,
+        "balance": 55000,
         "shadowEntries": []
       },
       "newValues": {
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 59499,
+        "balance": 50000,
         "shadowEntries": []
       },
-      "createdAt": "2025-09-10T16:42:46.069Z"
+      "createdAt": "2025-09-10T19:06:04.646Z"
     },
     {
-      "id": "audit_1757522566122_y1hqj6e56",
+      "id": "audit_1757531164651_763mzm2jd",
       "tableName": "accounts",
       "recordId": "acc_1",
       "action": "UPDATE",
@@ -1307,165 +546,61 @@
         "id": "acc_1",
         "name": "Demo User 1",
         "accountNumber": "0123456789",
-        "balance": 85501,
+        "balance": 95000,
         "shadowEntries": []
       },
       "newValues": {
         "id": "acc_1",
         "name": "Demo User 1",
         "accountNumber": "0123456789",
-        "balance": 90501,
+        "balance": 100000,
         "shadowEntries": []
       },
-      "createdAt": "2025-09-10T16:42:46.122Z"
+      "createdAt": "2025-09-10T19:06:04.651Z"
     },
     {
-      "id": "audit_1757522665239_c1xb39np8",
+      "id": "audit_1757531852723_ybrrfchg8",
       "tableName": "transactions",
-      "recordId": "tx_1757522665226_vs1hozoiv",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user1",
-        "txn_ref": "WT_1757522665226",
-        "type": "debit",
-        "amount": 5000,
-        "to_account": "9876543210",
-        "from_bank": "WemaTrust",
-        "note": "Gro",
-        "status": "success",
-        "id": "tx_1757522665226_vs1hozoiv",
-        "createdAt": "2025-09-10T16:44:25.227Z"
-      },
-      "userId": "user1",
-      "createdAt": "2025-09-10T16:44:25.239Z"
-    },
-    {
-      "id": "audit_1757522665250_djl8u3lzj",
-      "tableName": "transactions",
-      "recordId": "tx_1757522665241_qab625pth",
+      "recordId": "tx_1757531852721_e4hokzqrq",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user2",
-        "txn_ref": "WT_1757522665226",
-        "type": "credit",
-        "amount": 5000,
+        "txn_ref": "WT_1757531852717",
+        "type": "debit",
+        "amount": 3000,
+        "to_account": "0123456789",
         "from_bank": "WemaTrust",
-        "note": "Gro",
+        "note": "Testing 4",
         "status": "success",
-        "id": "tx_1757522665241_qab625pth",
-        "createdAt": "2025-09-10T16:44:25.241Z"
+        "id": "tx_1757531852721_e4hokzqrq",
+        "createdAt": "2025-09-10T19:17:32.721Z"
       },
       "userId": "user2",
-      "createdAt": "2025-09-10T16:44:25.250Z"
+      "createdAt": "2025-09-10T19:17:32.723Z"
     },
     {
-      "id": "audit_1757522665252_jthnlh9vn",
-      "tableName": "accounts",
-      "recordId": "acc_1",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 90501,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 85501,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:44:25.252Z"
-    },
-    {
-      "id": "audit_1757522665256_klupaam8p",
-      "tableName": "accounts",
-      "recordId": "acc_2",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 59499,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_2",
-        "name": "Demo User 2",
-        "accountNumber": "9876543210",
-        "balance": 64499,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:44:25.256Z"
-    },
-    {
-      "id": "audit_1757522798012_whuw1qnbz",
+      "id": "audit_1757531852727_a2bptdm0q",
       "tableName": "transactions",
-      "recordId": "tx_1757522798011_nx0x8k901",
+      "recordId": "tx_1757531852726_ahlbpib3f",
       "action": "CREATE",
       "oldValues": null,
       "newValues": {
         "userId": "user1",
-        "txn_ref": "WT_1757522798011",
-        "type": "debit",
-        "amount": 3000,
-        "to_account": "9876543210",
-        "from_bank": "WemaTrust",
-        "note": "Grow",
-        "status": "success",
-        "id": "tx_1757522798011_nx0x8k901",
-        "createdAt": "2025-09-10T16:46:38.011Z"
-      },
-      "userId": "user1",
-      "createdAt": "2025-09-10T16:46:38.012Z"
-    },
-    {
-      "id": "audit_1757522798016_du8dpx1x9",
-      "tableName": "transactions",
-      "recordId": "tx_1757522798015_pesv6q880",
-      "action": "CREATE",
-      "oldValues": null,
-      "newValues": {
-        "userId": "user2",
-        "txn_ref": "WT_1757522798011",
+        "txn_ref": "WT_1757531852717",
         "type": "credit",
         "amount": 3000,
         "from_bank": "WemaTrust",
-        "note": "Grow",
+        "note": "Testing 4",
         "status": "success",
-        "id": "tx_1757522798015_pesv6q880",
-        "createdAt": "2025-09-10T16:46:38.015Z"
+        "id": "tx_1757531852726_ahlbpib3f",
+        "createdAt": "2025-09-10T19:17:32.726Z"
       },
-      "userId": "user2",
-      "createdAt": "2025-09-10T16:46:38.016Z"
+      "userId": "user1",
+      "createdAt": "2025-09-10T19:17:32.728Z"
     },
     {
-      "id": "audit_1757522798023_j7nm34g96",
-      "tableName": "accounts",
-      "recordId": "acc_1",
-      "action": "UPDATE",
-      "oldValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 85501,
-        "shadowEntries": []
-      },
-      "newValues": {
-        "id": "acc_1",
-        "name": "Demo User 1",
-        "accountNumber": "0123456789",
-        "balance": 82501,
-        "shadowEntries": []
-      },
-      "createdAt": "2025-09-10T16:46:38.024Z"
-    },
-    {
-      "id": "audit_1757522798026_icnlkwi55",
+      "id": "audit_1757531852731_mtxzlgj5w",
       "tableName": "accounts",
       "recordId": "acc_2",
       "action": "UPDATE",
@@ -1473,17 +608,204 @@
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 64499,
+        "balance": 50000,
         "shadowEntries": []
       },
       "newValues": {
         "id": "acc_2",
         "name": "Demo User 2",
         "accountNumber": "9876543210",
-        "balance": 67499,
+        "balance": 47000,
         "shadowEntries": []
       },
-      "createdAt": "2025-09-10T16:46:38.026Z"
+      "createdAt": "2025-09-10T19:17:32.731Z"
+    },
+    {
+      "id": "audit_1757531852739_0oqij81x7",
+      "tableName": "accounts",
+      "recordId": "acc_1",
+      "action": "UPDATE",
+      "oldValues": {
+        "id": "acc_1",
+        "name": "Demo User 1",
+        "accountNumber": "0123456789",
+        "balance": 100000,
+        "shadowEntries": []
+      },
+      "newValues": {
+        "id": "acc_1",
+        "name": "Demo User 1",
+        "accountNumber": "0123456789",
+        "balance": 103000,
+        "shadowEntries": []
+      },
+      "createdAt": "2025-09-10T19:17:32.739Z"
     }
+  ],
+  "prefundedAccounts": [
+    [
+      "pfa_zenith",
+      {
+        "id": "pfa_zenith",
+        "bankId": "bank_a",
+        "bankName": "Zenith Bank",
+        "accountNumber": "2087654321",
+        "balance": 50000000,
+        "status": "ACTIVE",
+        "lastReplenished": "2025-09-10T18:49:44.700Z",
+        "createdAt": "2025-09-10T18:49:44.700Z"
+      }
+    ],
+    [
+      "pfa_gtbank",
+      {
+        "id": "pfa_gtbank",
+        "bankId": "bank_b",
+        "bankName": "GTBank",
+        "accountNumber": "0127654321",
+        "balance": 75000000,
+        "status": "ACTIVE",
+        "lastReplenished": "2025-09-10T18:49:44.700Z",
+        "createdAt": "2025-09-10T18:49:44.700Z"
+      }
+    ],
+    [
+      "pfa_access",
+      {
+        "id": "pfa_access",
+        "bankId": "bank_c",
+        "bankName": "Access Bank",
+        "accountNumber": "0447654321",
+        "balance": 25000000,
+        "status": "LOW",
+        "lastReplenished": "2025-09-10T18:49:44.700Z",
+        "createdAt": "2025-09-10T18:49:44.700Z"
+      }
+    ],
+    [
+      "pfa_uba",
+      {
+        "id": "pfa_uba",
+        "bankId": "bank_d",
+        "bankName": "UBA",
+        "accountNumber": "2227654321",
+        "balance": 4997000,
+        "status": "DEPLETED",
+        "lastReplenished": "2025-09-10T18:49:44.700Z",
+        "createdAt": "2025-09-10T18:49:44.700Z"
+      }
+    ]
+  ],
+  "transferLogs": [
+    [
+      "tl_1757530252575_l404qibwj",
+      {
+        "transactionId": "WT_1757530252564",
+        "senderUserId": "user1",
+        "senderName": "Demo User 1",
+        "senderAccount": "0123456789",
+        "recipientUserId": "user2",
+        "recipientName": "Demo User 2",
+        "recipientAccount": "9876543210",
+        "recipientBank": "WemaTrust",
+        "amount": 5000,
+        "transferType": "WEMA_TO_WEMA",
+        "instantStatus": "CREDITED",
+        "backendStatus": "SETTLED",
+        "notes": "Instant transfer - Internal ledger",
+        "id": "tl_1757530252575_l404qibwj",
+        "createdAt": "2025-09-10T18:50:52.575Z",
+        "settledAt": "2025-09-10T18:50:55.586Z",
+        "settlementReference": "STL_1757530255586"
+      }
+    ],
+    [
+      "tl_1757530399786_v83hz4vqn",
+      {
+        "transactionId": "WT_1757530399756",
+        "senderUserId": "user1",
+        "senderName": "Demo User 1",
+        "senderAccount": "0123456789",
+        "recipientUserId": "user2",
+        "recipientName": "Demo User 2",
+        "recipientAccount": "9876543210",
+        "recipientBank": "WemaTrust",
+        "amount": 3000,
+        "transferType": "WEMA_TO_WEMA",
+        "instantStatus": "CREDITED",
+        "backendStatus": "SETTLED",
+        "notes": "Instant transfer - Internal ledger",
+        "id": "tl_1757530399786_v83hz4vqn",
+        "createdAt": "2025-09-10T18:53:19.786Z",
+        "settledAt": "2025-09-10T18:53:22.882Z",
+        "settlementReference": "STL_1757530402882"
+      }
+    ],
+    [
+      "tl_1757531026062_cyf6o7n30",
+      {
+        "transactionId": "WT_1757531026045",
+        "senderUserId": "user2",
+        "senderName": "Demo User 2",
+        "senderAccount": "9876543210",
+        "recipientUserId": "user1",
+        "recipientName": "Demo User 1",
+        "recipientAccount": "0123456789",
+        "recipientBank": "WemaTrust",
+        "amount": 3000,
+        "transferType": "WEMA_TO_WEMA",
+        "instantStatus": "CREDITED",
+        "backendStatus": "SETTLED",
+        "notes": "Instant transfer - Internal ledger",
+        "id": "tl_1757531026062_cyf6o7n30",
+        "createdAt": "2025-09-10T19:03:46.062Z",
+        "settledAt": "2025-09-10T19:03:49.081Z",
+        "settlementReference": "STL_1757531029081"
+      }
+    ],
+    [
+      "tl_1757531164655_kecw7k03l",
+      {
+        "transactionId": "WT_1757531164628",
+        "senderUserId": "user2",
+        "senderName": "Demo User 2",
+        "senderAccount": "9876543210",
+        "recipientUserId": "user1",
+        "recipientName": "Demo User 1",
+        "recipientAccount": "0123456789",
+        "recipientBank": "WemaTrust",
+        "amount": 5000,
+        "transferType": "WEMA_TO_WEMA",
+        "instantStatus": "CREDITED",
+        "backendStatus": "SETTLED",
+        "notes": "Instant transfer - Internal ledger",
+        "id": "tl_1757531164655_kecw7k03l",
+        "createdAt": "2025-09-10T19:06:04.655Z",
+        "settledAt": "2025-09-10T19:06:07.834Z",
+        "settlementReference": "STL_1757531167833"
+      }
+    ],
+    [
+      "tl_1757531852741_ifb0ehn2s",
+      {
+        "transactionId": "WT_1757531852717",
+        "senderUserId": "user2",
+        "senderName": "Demo User 2",
+        "senderAccount": "9876543210",
+        "recipientUserId": "user1",
+        "recipientName": "Demo User 1",
+        "recipientAccount": "0123456789",
+        "recipientBank": "bank_d",
+        "amount": 3000,
+        "transferType": "WEMA_TO_OTHER",
+        "instantStatus": "CREDITED",
+        "backendStatus": "UNRESOLVED",
+        "prefundedAccountUsed": "pfa_uba",
+        "prefundedAccountBalance": 4997000,
+        "notes": "Instant transfer - Prefunded account used (Bank: DOWN)",
+        "id": "tl_1757531852741_ifb0ehn2s",
+        "createdAt": "2025-09-10T19:17:32.741Z"
+      }
+    ]
   ]
 }

@@ -469,7 +469,7 @@ class BrowserDatabase {
 
   updateTransferLogBackendStatus(
     id: string, 
-    status: 'PENDING' | 'SETTLED' | 'FAILED' | 'REVERSED', 
+    status: 'PENDING' | 'SETTLED' | 'FAILED' | 'REVERSED' | 'UNRESOLVED', 
     settlementReference?: string
   ): boolean {
     const log = this.data.transferLogs.get(id);

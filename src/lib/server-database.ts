@@ -73,6 +73,8 @@ class ServerDatabase {
         transactions: Array.from(this.data.transactions.entries()),
         shadowEntries: Array.from(this.data.shadowEntries.entries()),
         auditLogs: this.data.auditLogs,
+        prefundedAccounts: Array.from(this.data.prefundedAccounts.entries()),
+        transferLogs: Array.from(this.data.transferLogs.entries()),
       };
       
       fs.writeFileSync(filePath, JSON.stringify(dataToSave, null, 2));
@@ -96,6 +98,8 @@ class ServerDatabase {
         this.data.transactions = new Map(data.transactions || []);
         this.data.shadowEntries = new Map(data.shadowEntries || []);
         this.data.auditLogs = data.auditLogs || [];
+        this.data.prefundedAccounts = new Map(data.prefundedAccounts || []);
+        this.data.transferLogs = new Map(data.transferLogs || []);
       }
     } catch (error) {
       console.warn('Failed to load from file:', error);
@@ -155,10 +159,10 @@ class ServerDatabase {
 
     // Create partner banks
     const partnerBanks: PartnerBank[] = [
-      { id: 'bank_a', name: 'Zenith Bank', status: 'UP', historicalSuccessRate: 0.98 },
-      { id: 'bank_b', name: 'GTBank', status: 'UP', historicalSuccessRate: 0.99 },
-      { id: 'bank_c', name: 'Access Bank', status: 'SLOW', historicalSuccessRate: 0.85 },
-      { id: 'bank_d', name: 'UBA', status: 'DOWN', historicalSuccessRate: 0.6 },
+      { id: 'bank_a', name: 'Zenith Bank', status: 'UP', historicalSuccessRate: 0.98, networkReliability: 98 },
+      { id: 'bank_b', name: 'GTBank', status: 'UP', historicalSuccessRate: 0.99, networkReliability: 99 },
+      { id: 'bank_c', name: 'Access Bank', status: 'SLOW', historicalSuccessRate: 0.85, networkReliability: 75 },
+      { id: 'bank_d', name: 'UBA', status: 'DOWN', historicalSuccessRate: 0.6, networkReliability: 45 },
     ];
 
     partnerBanks.forEach(bank => {
@@ -461,7 +465,7 @@ class ServerDatabase {
 
   updateTransferLogBackendStatus(
     id: string, 
-    status: 'PENDING' | 'SETTLED' | 'FAILED' | 'REVERSED', 
+    status: 'PENDING' | 'SETTLED' | 'FAILED' | 'REVERSED' | 'UNRESOLVED', 
     settlementReference?: string
   ): boolean {
     const log = this.data.transferLogs.get(id);

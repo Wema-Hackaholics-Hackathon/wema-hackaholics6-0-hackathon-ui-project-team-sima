@@ -6,6 +6,7 @@ const transferSchema = z.object({
   fromUserId: z.string().min(1, 'From user ID is required'),
   toAccountNumber: z.string().length(10, 'Account number must be 10 digits'),
   amount: z.coerce.number().positive('Amount must be positive'),
+  fromBank: z.string().min(1, 'Destination bank is required'),
   note: z.string().optional(),
 });
 
@@ -14,7 +15,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const validatedData = transferSchema.parse(body);
     
-    const { fromUserId, toAccountNumber, amount, note } = validatedData;
+    const { fromUserId, toAccountNumber, amount, fromBank, note } = validatedData;
 
     // Get sender user and account
     const sender = dbOperations.getUser(fromUserId);
@@ -46,9 +47,14 @@ export async function POST(request: Request) {
     // Generate transaction reference
     const txnRef = `WT_${Date.now()}`;
 
-    // Determine transfer type and handle accordingly
-    const isWemaToWema = true; // Both accounts are Wema accounts
-    const recipientBankId = 'bank_a'; // Assume Zenith for demo
+    // Get the selected bank and determine transfer type
+    const selectedBank = dbOperations.getPartnerBank(fromBank);
+    const isWemaToWema = !selectedBank; // If no partner bank found, it's Wema-to-Wema
+    const recipientBankId = selectedBank?.id || 'WemaTrust';
+    
+    // Check bank status for backend settlement
+    const bankStatus = selectedBank?.status || 'UP';
+    const isProblematicBank = bankStatus === 'SLOW' || bankStatus === 'DOWN';
     
     let prefundedAccountUsed: string | undefined;
     let prefundedAccountBalance: number | undefined;
@@ -57,14 +63,17 @@ export async function POST(request: Request) {
     if (!isWemaToWema) {
       const prefundedAccounts = dbOperations.getAllPrefundedAccounts();
       const availableAccount = prefundedAccounts.find(
-        acc => acc.bankId === recipientBankId && acc.status === 'ACTIVE' && acc.balance >= amount
+        acc => acc.bankId === recipientBankId && acc.balance >= amount
       );
       
       if (availableAccount) {
-        // Deduct from prefunded account
-        dbOperations.updatePrefundedAccountBalance(availableAccount.id, availableAccount.balance - amount);
+        // Deduct from prefunded account (even for SLOW/DOWN banks)
+        const newBalance = availableAccount.balance - amount;
+        dbOperations.updatePrefundedAccountBalance(availableAccount.id, newBalance);
         prefundedAccountUsed = availableAccount.id;
-        prefundedAccountBalance = availableAccount.balance - amount;
+        prefundedAccountBalance = newBalance;
+      } else {
+        return NextResponse.json({ error: 'Insufficient prefunded account balance' }, { status: 400 });
       }
     }
 
@@ -111,22 +120,26 @@ export async function POST(request: Request) {
       amount,
       transferType: isWemaToWema ? 'WEMA_TO_WEMA' : 'WEMA_TO_OTHER',
       instantStatus: 'CREDITED',
-      backendStatus: 'PENDING',
+      backendStatus: isProblematicBank ? 'UNRESOLVED' : 'PENDING',
       prefundedAccountUsed,
       prefundedAccountBalance,
-      notes: `Instant transfer - ${isWemaToWema ? 'Internal ledger' : 'Prefunded account used'}`,
+      notes: `Instant transfer - ${isWemaToWema ? 'Internal ledger' : `Prefunded account used (Bank: ${bankStatus})`}`,
     });
 
     console.log(`[INSTANT TRANSFER] ${sender.name} -> ${recipient.name}: ₦${amount.toLocaleString()}`);
     console.log(`[BALANCE UPDATE] ${sender.name}: ₦${newSenderBalance.toLocaleString()}, ${recipient.name}: ₦${newRecipientBalance.toLocaleString()}`);
-    console.log(`[TRANSFER LOG] Created log ID: ${transferLog.id}, Status: CREDITED/PENDING`);
+    console.log(`[TRANSFER LOG] Created log ID: ${transferLog.id}, Status: CREDITED/${isProblematicBank ? 'UNRESOLVED' : 'PENDING'}`);
 
-    // Simulate backend settlement (in real system, this would be async)
-    setTimeout(() => {
-      const settlementRef = `STL_${Date.now()}`;
-      dbOperations.updateTransferLogBackendStatus(transferLog.id, 'SETTLED', settlementRef);
-      console.log(`[BACKEND SETTLEMENT] Transfer ${txnRef} settled with reference ${settlementRef}`);
-    }, 3000); // Simulate 3-second settlement
+    // Simulate backend settlement (only for non-problematic banks)
+    if (!isProblematicBank) {
+      setTimeout(() => {
+        const settlementRef = `STL_${Date.now()}`;
+        dbOperations.updateTransferLogBackendStatus(transferLog.id, 'SETTLED', settlementRef);
+        console.log(`[BACKEND SETTLEMENT] Transfer ${txnRef} settled with reference ${settlementRef}`);
+      }, 3000); // Simulate 3-second settlement
+    } else {
+      console.log(`[BACKEND SETTLEMENT] Transfer ${txnRef} marked as UNRESOLVED due to ${bankStatus} bank status`);
+    }
 
     return NextResponse.json({
       success: true,

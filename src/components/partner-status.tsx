@@ -25,12 +25,25 @@ export function PartnerStatus({ partnerBanks }: { partnerBanks: PartnerBank[]}) 
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-3">
-          {partnerBanks.map(bank => (
-            <div key={bank.id} className="flex justify-between items-center text-sm p-2 rounded-md bg-secondary/30">
-              <span className="font-medium">{bank.name}</span>
-              <StatusBadge status={bank.status} />
-            </div>
-          ))}
+          {partnerBanks.map(bank => {
+            const getReliabilityColor = (reliability: number) => {
+              if (reliability >= 90) return 'text-green-600 font-bold';
+              if (reliability >= 70) return 'text-yellow-600 font-bold';
+              return 'text-red-600 font-bold';
+            };
+
+            return (
+              <div key={bank.id} className="flex justify-between items-center text-sm p-2 rounded-md bg-secondary/30">
+                <div className="flex flex-col">
+                  <span className="font-medium">{bank.name}</span>
+                  <span className={`text-xs ${getReliabilityColor(bank.networkReliability)}`}>
+                    Network Reliability: {bank.networkReliability}%
+                  </span>
+                </div>
+                <StatusBadge status={bank.status} />
+              </div>
+            );
+          })}
         </div>
       </CardContent>
     </Card>

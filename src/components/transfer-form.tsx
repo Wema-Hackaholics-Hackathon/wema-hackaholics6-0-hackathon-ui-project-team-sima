@@ -134,6 +134,7 @@ export function TransferForm({ user, partnerBanks, onTransferSuccess }: { user: 
         fromUserId: formData.get('userId') as string,
         toAccountNumber: formData.get('to_account') as string,
         amount: Number(formData.get('amount')),
+        fromBank: selectedBankId,
         note: formData.get('note') as string,
       };
       
@@ -231,14 +232,27 @@ export function TransferForm({ user, partnerBanks, onTransferSuccess }: { user: 
                   <SelectValue placeholder="Select a bank" />
                 </SelectTrigger>
                 <SelectContent>
-                  {partnerBanks.map(bank => (
-                    <SelectItem key={bank.id} value={bank.id}>
-                      <div className="flex justify-between w-full">
-                        <span>{bank.name}</span>
-                        <StatusBadge status={bank.status} className="mr-2"/>
-                      </div>
-                    </SelectItem>
-                  ))}
+                  {partnerBanks.map(bank => {
+                    const getReliabilityColor = (reliability: number) => {
+                      if (reliability >= 90) return 'text-green-600 font-bold';
+                      if (reliability >= 70) return 'text-yellow-600 font-bold';
+                      return 'text-red-600 font-bold';
+                    };
+
+                    return (
+                      <SelectItem key={bank.id} value={bank.id}>
+                        <div className="flex justify-between w-full">
+                          <div className="flex flex-col">
+                            <span>{bank.name}</span>
+                            <span className={`text-xs ${getReliabilityColor(bank.networkReliability)}`}>
+                              Reliability: {bank.networkReliability}%
+                            </span>
+                          </div>
+                          <StatusBadge status={bank.status} className="mr-2"/>
+                        </div>
+                      </SelectItem>
+                    );
+                  })}
                 </SelectContent>
               </Select>
                {state.errors?.from_bank && <p className="text-sm text-destructive">{state.errors.from_bank[0]}</p>}
@@ -259,7 +273,9 @@ export function TransferForm({ user, partnerBanks, onTransferSuccess }: { user: 
                         <AlertTriangle className="h-4 w-4" />
                         <AlertTitle>Partner Bank Warning</AlertTitle>
                         <AlertDescription>
-                            {selectedBank?.name} is currently experiencing issues ({selectedBank?.status}). Your transfer may be delayed.
+                            {selectedBank?.name} is currently experiencing issues ({selectedBank?.status}). 
+                            Network reliability is at <span className={`font-bold ${selectedBank?.networkReliability && selectedBank.networkReliability >= 70 ? 'text-yellow-600' : 'text-red-600'}`}>{selectedBank?.networkReliability}%</span>. 
+                            Your transfer may be delayed or fail.
                         </AlertDescription>
                     </Alert>
                 </div>
@@ -298,7 +314,7 @@ export function TransferForm({ user, partnerBanks, onTransferSuccess }: { user: 
           <AlertDialogHeader>
             <AlertDialogTitle>Are you sure you want to proceed?</AlertDialogTitle>
             <AlertDialogDescription>
-              The destination bank, {selectedBank?.name}, is currently {selectedBank?.status}. 
+              The destination bank, {selectedBank?.name}, is currently {selectedBank?.status} with <span className={`font-bold ${selectedBank?.networkReliability && selectedBank.networkReliability >= 70 ? 'text-yellow-600' : 'text-red-600'}`}>{selectedBank?.networkReliability}%</span> network reliability. 
               This transaction might be delayed or fail. Do you still want to continue?
             </AlertDialogDescription>
           </AlertDialogHeader>

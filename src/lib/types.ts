@@ -33,6 +33,7 @@ export interface PartnerBank {
   name: string;
   status: PartnerBankStatus;
   historicalSuccessRate: number;
+  networkReliability: number; // Percentage (0-100)
 }
 
 export interface Transaction {
@@ -86,7 +87,7 @@ export interface TransferLog {
   amount: number;
   transferType: 'WEMA_TO_WEMA' | 'WEMA_TO_OTHER' | 'OTHER_TO_WEMA';
   instantStatus: 'CREDITED' | 'PENDING' | 'FAILED';
-  backendStatus: 'PENDING' | 'SETTLED' | 'FAILED' | 'REVERSED';
+  backendStatus: 'PENDING' | 'SETTLED' | 'FAILED' | 'REVERSED' | 'UNRESOLVED';
   prefundedAccountUsed?: string;
   prefundedAccountBalance?: number;
   settlementReference?: string;

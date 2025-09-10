@@ -84,6 +84,8 @@ export function AdminLogsDashboard({ userId }: AdminLogsDashboardProps) {
         return <Badge variant="destructive">Failed</Badge>;
       case 'REVERSED':
         return <Badge variant="outline">Reversed</Badge>;
+      case 'UNRESOLVED':
+        return <Badge variant="destructive" className="bg-orange-100 text-orange-800">Unresolved</Badge>;
       default:
         return <Badge variant="outline">{status}</Badge>;
     }
