@@ -1,4 +1,4 @@
-# [Project Title]
+# Wema Trust
 
 ## Team Members
 - Olaniran Pamilerin Simon
