@@ -25,7 +25,7 @@
 
 ## ✨ Our Solution
 
-Our project, **Instant-Feel Transactions**, is a prototype system designed to make transfers feel as seamless as fintechs like OPay and Moniepoint — even when issues occur behind the scenes.  
+Our project, **Instant-Feel Transactions**, is a prototype system designed to make transfers feel as seamless as fintechs — even when issues occur behind the scenes.  
 
 We combined **proactive communication**, **smart crediting**, and **fintech-inspired liquidity pools** to solve both the *trust gap* and the *instant transfer problem* in commercial banks.  
 
@@ -37,7 +37,6 @@ We combined **proactive communication**, **smart crediting**, and **fintech-insp
 2. **Pre-Funded Pool Accounts:**  
    - Wema holds funded accounts in major partner banks (e.g., GTB, Access).  
    - Outbound transfers are instantly credited from these pools while final settlement with NIBSS happens later.  
-   - This mirrors how OPay and Moniepoint achieve speed.  
 
 3. **Tiered Risk Controls:**  
    - **Low-value transfers (< ₦50k):** Auto-credit with minimal checks.  
