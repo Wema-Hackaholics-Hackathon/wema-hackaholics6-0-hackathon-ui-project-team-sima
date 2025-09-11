@@ -1,10 +1,10 @@
-# Wema Trust
+# [Wema Trust](https://wematrust.vercel.app/)
 
 ## Team Members
-- Olaniran Pamilerin Simon
+- [Olaniran Pamilerin Simon](https://github.com/pamilerinsimon03)
 - Oluremi Alao
 - Victor Akinmoladun
-- Ayooluwa Paul
+- [Ayooluwa Paul](https://github.com/sphinx010)
 - Kolawole Jegede
 
 ---
